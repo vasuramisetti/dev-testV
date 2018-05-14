@@ -1,7 +1,7 @@
 ---
-- name: Download Artifacts of C3webapplication
+- name: Download Alert deployment scripts from artifactory 
   become: yes
-  become_user: itcwebdev
+  become_user: tfccdply
   get_url:
           url: http://artifacts.west.com/artifactory/libs-snapshot/com/tfcci/ucs/TFCCAlert/${VERSION}/TFCCAlert-${VERSION}.deploymentScripts.tar.gz" -O deploymentScripts.gz
           shell: gtar -zxvf deploymentScripts.gz
