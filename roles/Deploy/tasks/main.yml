@@ -1,7 +1,6 @@
 ---
 - name: Download Alert deployment scripts from artifactory
-  get_url:
-          url: https://artifacts.west.com/artifactory/libs-snapshot-local/com/tfcci/ucs/TFCCAlert/4.3.1-SNAPSHOT/
-          dest: /home/vasu
-          mode: 0755
+  shell: wget "https://artifacts.west.com/artifactory/libs-snapshot-local/com/tfcci/ucs/TFCCAlert/4.3.1-SNAPSHOT/"
+         dest: /home/vasu
+         mode: 0755
           
