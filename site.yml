@@ -1,0 +1,9 @@
+
+---
+- name: Vasudev is Trying to connect solaris dev server.
+  hosts: all
+  connection: ssh
+  gather_facts: yes
+
+  roles: 
+    - Deploy
