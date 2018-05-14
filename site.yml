@@ -1,9 +1,10 @@
-
 ---
-- name: Vasudev is Trying to connect solaris dev server.
-  hosts: all
+- name: Vasudev is Transfering and execute a script.
+  hosts: all 
+  remote_user: tfccdply
+  sudo: yes
   connection: ssh
-  gather_facts: yes
 
-  roles: 
-    - Deploy
+  tasks:
+     - name: Taking script from source Transfer the script 
+       shell: echo "Hi! Tower is working with vasudev credentials." 
