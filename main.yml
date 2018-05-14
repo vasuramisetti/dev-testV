@@ -1,8 +1,6 @@
 ---
 - name: Vasudev is Transfering and execute a script.
   hosts: all
-  become: yes
-  become_user: tfccdply
   connection: ssh
 
   tasks:
