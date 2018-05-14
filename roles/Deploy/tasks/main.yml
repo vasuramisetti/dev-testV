@@ -1,0 +1,12 @@
+---
+- name: Download Artifacts of C3webapplication
+  become: yes
+  become_user: itcwebdev
+  get_url:
+          url: http://artifacts.west.com/artifactory/libs-snapshot/com/tfcci/ucs/TFCCAlert/${VERSION}/TFCCAlert-${VERSION}.deploymentScripts.tar.gz" -O deploymentScripts.gz
+          shell: gtar -zxvf deploymentScripts.gz
+          args:
+                  chdir: scripts/java-properties
+          shell: ./deploy-properties.sh tfccdply $PLATFORM
+          mode: 0755
+
