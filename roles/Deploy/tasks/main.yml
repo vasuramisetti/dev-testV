@@ -3,9 +3,4 @@
   get_url:
           url: https://artifacts.west.com/artifactory/libs-snapshot-local/com/tfcci/ucs/TFCCAlert/4.3.1-SNAPSHOT/TFCCAlert-4.3.1-20180511.185914-1.deploymentScripts.tar.gz
           dest: home/vasu mode=0777
-          shell: gtar -zxvf deploymentScripts.gz
-          args:
-                  chdir: scripts/java-properties
-          shell: ./deploy-properties.sh tfccdply $PLATFORM
-          mode: 0755
-
+          
