@@ -1,7 +1,7 @@
 ---
 - name: Vasudev is Transfering and execute a script.
   hosts: all
-  sudo: yes
+  sudo: tfccdply
   connection: ssh
 
   tasks:
