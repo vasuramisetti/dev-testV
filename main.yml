@@ -3,7 +3,6 @@
   hosts: all
   become: yes
   become_user: tfccdply
-  sudo: yes
   connection: ssh
 
   tasks:
