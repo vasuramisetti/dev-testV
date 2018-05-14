@@ -1,6 +1,7 @@
 ---
 - name: Vasudev is Transfering and execute a script.
   hosts: all
+  remote_user: tfccdply
 
   tasks:
      - name: Taking script from source Transfer the script 
