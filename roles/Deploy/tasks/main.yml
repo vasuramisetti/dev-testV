@@ -1,8 +1,8 @@
 ---
-- name: Trying to access with service account  
-  become: yes
-  become_user: tfccdply
-  tasks: 
-  - name: Please print on server what i mentioned here.
-    shell: echo "Hi! Tower is working with vasudev credentials." 
+ - name: trying to access with service account  
+   become: yes
+   become_user: tfccdply
+   tasks: 
+   - name: Please print on server what i mentioned here.
+     shell: echo "Hi! Tower is working with vasudev credentials." 
 
