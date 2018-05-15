@@ -1,6 +1,6 @@
 ---
 - name: Echo env variable version check 
-  shell: echo "Version: " $VERSION
+  shell: echo "Version:" $VERSION
   
 - name: Download Alert deployment scripts from artifactory
   copy: src=deploymentScripts.gz dest=/home/vasu mode=0755
