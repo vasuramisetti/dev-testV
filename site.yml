@@ -1,8 +1,6 @@
 ---
 - name: Vasudev is Transfering and execute a script.
   hosts: all
-  remote_user: vasu
-  sudo: yes
   connection: ssh
   
   roles: 
