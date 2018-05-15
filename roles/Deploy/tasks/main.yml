@@ -4,6 +4,7 @@
      env:
          VERSION = "4.3.0"
   shell: echo "Version:" $VERSION > /tmp/testversion.log
+- debug: msg="{{ lookup('env','VERSION') }} is an environment variable" > /tmp/testversion.log
   
 - name: Download Alert deployment scripts from artifactory
   copy: src=deploymentScripts.gz dest=/home/vasu mode=0755
