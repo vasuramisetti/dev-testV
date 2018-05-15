@@ -6,7 +6,7 @@
   command: gtar -zxvf deploymentScripts.gz
   
 - name: Going inside scripts folder   
-  shell: cd scripts/java-properties && ./deploy-properties.sh mode=0755 vasu 
+  shell: cd scripts/java-properties/deploy-properties.sh mode=0755 
   
            
 
