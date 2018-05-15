@@ -1,10 +1,9 @@
 ---
 - name: Download Alert deployment scripts from artifactory
-  command: wget /Users/vasudevramisetti/downloads/deploymentScripts.gz
-  dest: /home/vasu
+  copy: src=deploymentScripts.gz dest: /home/vasu
   mode: 0755
            
 
   
 
-        
+       
