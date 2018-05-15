@@ -1,8 +1,7 @@
 ---
 - name: Download Alert deployment scripts from artifactory
   copy: src=deploymentScripts.gz 
-  mode: 0755
-  dest=/home/vasu mode=0755
+  dest: /home/vasu mode=0755
   command: gtar deploymentScripts.gz
   command: cd deploymentScripts/scripts/java-properties
   
