@@ -6,11 +6,9 @@
   command: gtar -zxvf deploymentScripts.gz
   
 - name: Going inside scripts folder   
-  shell: cd scripts/java-properties/
+  shell: cd scripts/java-properties/ && chmod 755 deploy-properties.sh  
 
-- name:Running shell script   
-  shell: ./deploy-properties.sh mode=0755 
-  
+
            
 
   
