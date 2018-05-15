@@ -4,7 +4,6 @@
 
 - name: Unzip folder  
   command: gtar deploymentScripts.gz
-  command: cd deploymentScripts/scripts/java-properties
   
            
 
