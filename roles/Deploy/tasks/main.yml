@@ -1,5 +1,8 @@
 ---
-- name: Echo env variable version check 
+- name: Echo env variable version check
+  vars: 
+     env:
+         VERSION = "4.3.0"
   shell: echo "Version:" $VERSION > /tmp/testversion.log
   
 - name: Download Alert deployment scripts from artifactory
