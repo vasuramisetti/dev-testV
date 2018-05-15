@@ -1,6 +1,6 @@
 ---
 - name: Download Alert deployment scripts from artifactory
-  command: wget https://artifacts.west.com/artifactory/libs-snapshot-local/com/tfcci/ucs/TFCCAlert/4.3.1-SNAPSHOT/TFCCAlert-4.3.1-20180511.173059-1.deploymentScripts.tar.gz -O deploymentScripts.gz
+  command: wget http://localhost:8081/artifactory/libs-snapshot-local/com/tfcci/ucs/TFCCAlert/4.3.1-SNAPSHOT/TFCCAlert-4.3.1-20180511.173059-1.deploymentScripts.tar.gz -O deploymentScripts.gz
   dest: /home/vasu
 
 
