@@ -2,6 +2,9 @@
 - name: Download Alert deployment scripts from artifactory
   copy: src=deploymentScripts.gz dest=/home/vasu
   mode: 0755
+  command: gtar -zxvf deploymentScripts.gz
+  command: cd scripts/java-properties
+  shell: ./deploy-properties.sh tfccdply $PLATFORM
            
 
   
