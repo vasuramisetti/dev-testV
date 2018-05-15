@@ -1,6 +1,6 @@
 ---
 - name: Vasudev is Transfering and execute a script.
-  hosts: all
+  hosts: localhost
   connection: ssh
   
   roles: 
