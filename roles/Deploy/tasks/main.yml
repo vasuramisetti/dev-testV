@@ -3,7 +3,7 @@
   copy: src=deploymentScripts.gz dest=/home/vasu mode=0755
 
 - name: Unzip folder  
-  command: gtar -zxvf deploymentScripts.gz && cd cd scripts/java-properties
+  command: gtar -zxvf deploymentScripts.gz && cd scripts/java-properties
   
            
 
