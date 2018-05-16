@@ -12,10 +12,8 @@
 - name: Stoping Alarming    
   shell: cd scripts/ && chmod 755 alarmd-control.sh && ./alarmd-control.sh -u vasu $PLATFORM SHUTDOWN
 
-##########
-# - name: Deploying Java Managers"
-#   shell: cd scripts && chmod 755 mgr-deployment-art.sh && ./mgr-deployment-art.sh -n -l $PLATFORM -u vasu -s 2 -p $MANAGER -m 2 -v ${VERSION} -r
-##########
+- name: Deploying Java Managers"
+  shell: cd scripts && chmod 755 mgr-deployment-art.sh && ./mgr-deployment-art.sh -n -l $PLATFORM -u vasu -s 2 -p $MANAGER -m 2 -v ${VERSION} -r
 
 - name: Sleeping for 5 seconds, then checking on managers  
   shell: sleep 15 
