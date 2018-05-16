@@ -13,14 +13,14 @@
   shell: cd scripts/ && chmod 755 alarmd-control.sh && ./alarmd-control.sh -u vasu $PLATFORM SHUTDOWN
   
 - name: Deploying Java Managers"
-  shell: chmod 755 ./scripts/mgr-deployment-art.sh -n -l $PLATFORM -u vasu -s 2 -p $MANAGER -m 2 -v ${VERSION} -r
+  shell: ./scripts && chmod 755 mgr-deployment-art.sh && ./mgr-deployment-art.sh -n -l $PLATFORM -u vasu -s 2 -p $MANAGER -m 2 -v ${VERSION} -r
   
 - name: Sleeping for 5 seconds, then checking on managers  
   shell: sleep 15 
-  shell: ./scripts/mgr-service-setup.sh chmod 755 --user vasu --location $PLATFORM --mode QUERY_CHANGING
+  shell: ./scripts && chmod 755 mgr-service-setup.sh && ./mgr-service-setup.sh --user vasu --location $PLATFORM --mode QUERY_CHANGING
   
 - name: Clearing and Starting Alarming Back Up
-  shell: ./scripts/alarmd-control.sh chmod 755 vasu BETA STARTUP > /tmp/testscript.log 
+  shell: ./scripts && chmod 755 alarmd-control.sh && ./alarmd-control.sh -u vasu BETA STARTUP > /tmp/testscript.log 
 
            
 
