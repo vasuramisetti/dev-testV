@@ -19,7 +19,7 @@
 
 - name: Sleeping for 5 seconds, then checking on managers  
   shell: sleep 15 
-  shell: cd scripts && chmod 755 mgr-service-setup.sh && ./mgr-service-setup.sh --user vasu --location $PLATFORM --mode QUERY_CHANGING
+  shell: cd scripts && chmod 755 mgr-service-setup.sh && ./mgr-service-setup.sh -u vasu --location $PLATFORM --mode QUERY_CHANGING
   
 - name: Clearing and Starting Alarming Back Up
   shell: cd scripts && chmod 755 alarmd-control.sh && ./alarmd-control.sh -u vasu BETA STARTUP > /tmp/testscript.log 
