@@ -13,7 +13,7 @@
   shell: ./scripts/alarmd-control.sh vasu $PLATFORM SHUTDOWN
   
 - name: Deploying Java Managers"
-  shell: ./scripts/mgr-deployment-art.sh mode: 0755 -n -l $PLATFORM -u vasu -s 2 -p $MANAGER -m 2 -v ${VERSION} -r
+  shell: chmod 755 ./scripts/mgr-deployment-art.sh -n -l $PLATFORM -u vasu -s 2 -p $MANAGER -m 2 -v ${VERSION} -r
   
 - name: Sleeping for 5 seconds, then checking on managers  
   shell: sleep 15 
