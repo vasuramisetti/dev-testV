@@ -1,10 +1,4 @@
----
-- name: Echo env variable version check
-  vars: 
-     env:
-         VERSION = "4.3.0"
-  shell: echo "Version:" $VERSION > /tmp/testversion.log
-  
+--- 
 - name: Download Alert deployment scripts from artifactory
   copy: src=deploymentScripts.gz dest=/home/vasu mode=0755
 
@@ -13,7 +7,19 @@
   
 - name: Going inside scripts folder3   
   shell: cd scripts/java-properties/ && chmod 755 deploy-properties.sh  && ./deploy-properties.sh vasu $PLATFORM > /tmp/testscript.log 
-
+  
+- name: Stoping Alarming 
+  shell: ./scripts/alarmd-control.sh vasu $PLATFORM SHUTDOWN
+  
+- name: Deploying Java Managers"
+  shell: ./scripts/mgr-deployment-art.sh -n -l $PLATFORM -u vasu -s 2 -p $MANAGER -m 2 -v ${VERSION} -r
+  
+- name: Sleeping for 5 seconds, then checking on managers  
+  shell: sleep 15 
+  shell: ./scripts/mgr-service-setup.sh --user vasu --location $PLATFORM --mode QUERY_CHANGING
+  
+- name: Clearing and Starting Alarming Back Up
+  shell: ./scripts/alarmd-control.sh vasu BETA STARTUP
 
            
 
